@@ -134,39 +134,40 @@
         }
     </style>
 </head>
-<body class="antialiased selection:bg-brandGreen selection:text-brandDarkBlue">
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-brandGreen selection:text-brandDarkBlue">
 
-    <!-- Barra superior luminosa -->
-    <div class="h-1.5 w-full wave-glow"></div>
-
-    <!-- Navegación / Header minimalista -->
-    <header class="w-full py-4 px-4 sm:px-8 border-b border-white/10 bg-brandDarkBlue/70 backdrop-blur-md sticky top-0 z-40">
-        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
-            <div class="flex items-center gap-3">
-                <!-- Isotipo Verde y Azul -->
-                <div class="w-10 h-10 rounded-full bg-gradient-to-b from-brandEmerald to-brandBlue p-0.5 flex items-center justify-center shadow-lg">
-                    <div class="w-full h-full rounded-full bg-brandDarkBlue flex items-center justify-center overflow-hidden relative">
-                        <div class="absolute top-0 w-full h-1/2 bg-brandEmerald"></div>
-                        <div class="absolute bottom-0 w-full h-1/2 bg-brandBrightBlue"></div>
-                        <div class="w-5 h-1.5 bg-white rounded-full z-10"></div>
+    <!-- Barra Superior Institucional Fija -->
+    <header class="sticky top-0 z-40 border-b border-white/10 bg-brandDarkBlue/90 backdrop-blur-md">
+        <div class="wave-glow h-1.5 w-full"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between gap-2">
+            <div class="flex items-center gap-3 shrink-0">
+                <!-- Emblema estilizado Verde y Azul -->
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-b from-brandEmerald to-brandBlue p-0.5 shadow-lg flex items-center justify-center">
+                    <div class="w-full h-full rounded-full bg-white flex flex-col overflow-hidden">
+                        <div class="h-1/2 bg-brandEmerald rounded-br-full"></div>
+                        <div class="h-1/2 bg-brandBlue rounded-tl-full"></div>
                     </div>
                 </div>
                 <div>
-                    <span class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-white block leading-none">
-                        VERDE <span class="text-brandGreen">Y</span> AZUL
-                    </span>
-                    <span class="text-xs text-blue-200 font-medium">Elecciones ISSyS • Chubut</span>
+                    <span class="font-display font-extrabold text-lg sm:text-2xl tracking-tight text-white">ISSyS</span>
+                    <span class="hidden sm:block text-xs text-blue-200/80 -mt-1">Lista Verde y Azul</span>
                 </div>
             </div>
 
-            <div class="flex items-center gap-3">
-                <span class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/10 text-brandGreen border border-brandGreen/30">
+            <div class="flex items-center gap-2 sm:gap-3">
+                <span class="hidden lg:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/10 text-brandGreen border border-brandGreen/30">
                     <span class="w-2 h-2 rounded-full bg-brandGreen animate-ping"></span>
                     30 de Noviembre 2026
                 </span>
-                <a href="#padron" class="gemini-btn-wrapper">
+                <a href="https://issys.chubut.gov.ar/wp-content/uploads/2026/11/Resolucion-49_26-JE-ISSyS.pdf" target="_blank" rel="noopener noreferrer" class="gemini-btn-wrapper">
                     <span class="gemini-spin-bg"></span>
-                    <span class="gemini-btn-inner px-4 py-1.5 text-xs sm:text-sm font-bold text-white">
+                    <span class="gemini-btn-inner px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-bold text-white whitespace-nowrap">
+                        Consultar Mesas
+                    </span>
+                </a>
+                <a href="https://gb.chubut.gov.ar/votos/" target="_blank" rel="noopener noreferrer" class="gemini-btn-wrapper">
+                    <span class="gemini-spin-bg"></span>
+                    <span class="gemini-btn-inner px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-bold text-white whitespace-nowrap">
                         Consultar Padrón
                     </span>
                 </a>
@@ -176,9 +177,44 @@
 
     <main>
         <!-- =========================================================
-             1. SECCIÓN: CONTADOR DINÁMICO EXACTO (30 NOV 2026 - 09:00 HS)
+             1. SECCIÓN: VIDEO 1 ("QUIERO CONTARTE") ARRIBA DE TODO
              ========================================================= -->
-        <section id="contador" class="pt-10 sm:pt-14 pb-8 sm:pb-12 px-4 sm:px-8 relative">
+        <section id="video-principal" class="pt-10 sm:pt-14 pb-6 sm:pb-10 px-4 sm:px-8">
+            <div class="max-w-md mx-auto flex flex-col items-center text-center space-y-6">
+                
+                <!-- Botón Fijo con Título "Quiero contarte" -->
+                <div class="gemini-btn-wrapper">
+                    <span class="gemini-spin-bg"></span>
+                    <div class="gemini-btn-inner px-7 py-2.5 flex items-center gap-2.5 text-white font-display font-extrabold text-base sm:text-lg">
+                        <span class="w-2.5 h-2.5 rounded-full bg-brandGreen animate-pulse shrink-0"></span>
+                        <span>Quiero contarte</span>
+                    </div>
+                </div>
+
+                <!-- Contenedor Video 1 (9:16) con Borde Dinámico Estilo Gemini -->
+                <div class="w-full max-w-[320px] sm:max-w-[360px] gemini-border-box rounded-3xl">
+                    <div class="gemini-spin-bg"></div>
+                    <div class="relative z-10 rounded-[21px] overflow-hidden bg-brandDarkBlue aspect-[9/16] w-full flex flex-col items-center justify-center">
+                        <video 
+                            class="w-full h-full object-cover" 
+                            controls 
+                            playsinline 
+                            preload="metadata"
+                            poster="WhatsApp Image 2026-11-16 at 18.07.58.jpeg"
+                        >
+                            <source src="video-campana.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================================
+             2. SECCIÓN: CONTADOR DINÁMICO EXACTO + BOTÓN CONSULTAR MESAS
+             ========================================================= -->
+        <section id="contador" class="py-8 sm:py-12 px-4 sm:px-8 relative">
             <div class="max-w-5xl mx-auto">
                 <!-- Marco con borde dinámico estilo Gemini -->
                 <div class="gemini-border-box rounded-3xl">
@@ -196,7 +232,7 @@
                             Apertura de urnas: <strong class="text-white">Lunes 30 de Noviembre de 2026 a las 09:00 hs</strong> (Hora Argentina)
                         </p>
 
-                        <!-- Grid del Contador (cada caja también con borde dinámico) -->
+                        <!-- Grid del Contador -->
                         <div id="countdown-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-5 max-w-3xl mx-auto">
                             <!-- Días -->
                             <div class="gemini-border-box rounded-2xl">
@@ -243,8 +279,23 @@
                             <p class="text-white mt-2">Las mesas ya se encuentran habilitadas desde las 09:00 hs.</p>
                         </div>
 
-                        <!-- Botón Consultar el Padrón debajo del contador -->
-                        <div class="mt-8 flex justify-center">
+                        <!-- Botones Consultar Mesas y Consultar el Padrón dentro del contador -->
+                        <div class="mt-8 flex flex-wrap justify-center gap-4">
+                            <a 
+                                href="https://issys.chubut.gov.ar/wp-content/uploads/2026/11/Resolucion-49_26-JE-ISSyS.pdf" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="gemini-btn-wrapper group"
+                            >
+                                <span class="gemini-spin-bg"></span>
+                                <span class="gemini-btn-inner px-7 py-3.5 sm:px-9 sm:py-4 flex items-center gap-3 text-white font-display font-bold text-base sm:text-lg tracking-wide">
+                                    <svg class="w-5 h-5 sm:w-6 sm:h-6 text-brandGreen group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                    <span>Consultar Mesas</span>
+                                </span>
+                            </a>
+
                             <a 
                                 href="https://gb.chubut.gov.ar/votos/" 
                                 target="_blank" 
@@ -252,7 +303,7 @@
                                 class="gemini-btn-wrapper group"
                             >
                                 <span class="gemini-spin-bg"></span>
-                                <span class="gemini-btn-inner px-8 py-3.5 sm:px-10 sm:py-4 flex items-center gap-3 text-white font-display font-bold text-base sm:text-lg tracking-wide">
+                                <span class="gemini-btn-inner px-7 py-3.5 sm:px-9 sm:py-4 flex items-center gap-3 text-white font-display font-bold text-base sm:text-lg tracking-wide">
                                     <svg class="w-5 h-5 sm:w-6 sm:h-6 text-brandGreen group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"></path>
                                     </svg>
@@ -266,268 +317,111 @@
         </section>
 
         <!-- =========================================================
-             1.5. SECCIÓN: VIDEO VERTICAL (9:16) Y DESCARGA DE MESAS
+             3. SECCIÓN: VIDEOS VERTICALES (9:16) CON HOOKS EN BOTÓN FIJO
              ========================================================= -->
-        <section id="video-mesas" class="py-6 sm:py-10 px-4 sm:px-8">
-            <div class="max-w-md mx-auto flex flex-col items-center text-center space-y-6">
+        <section id="videos-propuestas" class="py-8 sm:py-14 px-4 sm:px-8">
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center">
                 
-                <!-- Botón Fijo con Hook Video 1 (sin comillas) -->
-                <div class="gemini-btn-wrapper">
-                    <span class="gemini-spin-bg"></span>
-                    <div class="gemini-btn-inner px-6 py-2.5 flex items-center gap-2.5 text-white font-display font-extrabold text-base sm:text-lg">
-                        <span class="w-2.5 h-2.5 rounded-full bg-brandGreen animate-pulse shrink-0"></span>
-                        <span>Tenemos presencia real en el territorio</span>
-                    </div>
-                </div>
-
-                <!-- Contenedor Video 1 (9:16) con Borde Dinámico Estilo Gemini -->
-                <div class="w-full max-w-[320px] sm:max-w-[360px] gemini-border-box rounded-3xl">
-                    <div class="gemini-spin-bg"></div>
-                    <div class="relative z-10 rounded-[21px] overflow-hidden bg-brandDarkBlue aspect-[9/16] w-full flex flex-col items-center justify-center">
-                        <!-- Reemplaza el src del <video> con la ruta de tu archivo .mp4 -->
-                        <video 
-                            class="w-full h-full object-cover" 
-                            controls 
-                            playsinline 
-                            preload="metadata"
-                            poster="WhatsApp Image 2026-11-16 at 18.07.58.jpeg"
-                        >
-                            <source src="video-campana.mp4" type="video/mp4">
-                            Tu navegador no soporta la reproducción de video.
-                        </video>
-                    </div>
-                </div>
-
-                <!-- Botón "Mesas" con Borde Dinámico Estilo Gemini -->
-                <div class="pt-2">
-                    <a 
-                        href="https://issys.chubut.gov.ar/wp-content/uploads/2026/11/Resolucion-49_26-JE-ISSyS.pdf" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        class="gemini-btn-wrapper group"
-                    >
+                <!-- Video 2 (9:16) -->
+                <div class="w-full max-w-[300px] sm:max-w-[340px] flex flex-col items-center text-center space-y-4">
+                    <div class="gemini-btn-wrapper">
                         <span class="gemini-spin-bg"></span>
-                        <span class="gemini-btn-inner px-9 py-4 flex items-center gap-3 text-white font-display font-bold text-lg sm:text-xl tracking-wide">
-                            <svg class="w-6 h-6 text-brandGreen group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                            </svg>
-                            <span>Mesas</span>
-                        </span>
-                    </a>
-                </div>
-
-                <!-- Texto descriptivo debajo del botón -->
-                <p class="text-blue-100 text-base sm:text-lg font-medium max-w-sm leading-relaxed">
-                    Conoce las mesas donde podrás votar este <strong class="text-brandGreen">30 de Noviembre</strong>
-                </p>
-
-            </div>
-        </section>
-
-        <!-- =========================================================
-             2. SECCIÓN: CONOCE EL PADRÓN (CON BOTÓN ESTILO GEMINI)
-             ========================================================= -->
-        <section id="padron" class="py-8 sm:py-14 px-4 sm:px-8">
-            <div class="max-w-4xl mx-auto">
-                <div class="gemini-border-box rounded-3xl">
-                    <div class="gemini-spin-bg"></div>
-                    <div class="gemini-inner-surface rounded-[21px] p-6 sm:p-10 md:p-12 text-center space-y-8">
-                        
-                        <!-- Imagen 2 con borde dinámico estilo Gemini -->
-                        <div class="relative max-w-xl mx-auto gemini-border-box rounded-3xl">
-                            <div class="gemini-spin-bg"></div>
-                            <div class="relative z-10 rounded-[21px] overflow-hidden bg-brandBlue">
-                                <img 
-                                    src="WhatsApp Image 2026-11-16 at 18.07.58.jpeg" 
-                                    alt="Equipo Lista Verde y Azul - ISSyS" 
-                                    class="w-full h-auto object-cover block"
-                                    onerror="this.onerror=null; this.src='https://placehold.co/800x900/003893/39FF14?text=Elegi+Verde+y+Azul+-+ISSyS';"
-                                />
-                            </div>
+                        <div class="gemini-btn-inner px-6 py-2.5 flex items-center gap-2.5 text-white font-display font-extrabold text-base sm:text-lg">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brandGreen animate-pulse shrink-0"></span>
+                            <span>Nuestros planes</span>
                         </div>
-
-                        <!-- Título "Conoce el padrón" y Botón Estilo Gemini -->
-                        <div class="space-y-4 max-w-xl mx-auto">
-                            <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
-                                Conoce el padrón
-                            </h2>
-                            <p class="text-blue-200 text-base sm:text-lg">
-                                Verificá tus datos y lugar de votación de manera rápida y segura en el sitio oficial de la Provincia del Chubut.
-                            </p>
-
-                            <div class="pt-3 flex justify-center">
-                                <a 
-                                    href="https://gb.chubut.gov.ar/votos/" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    class="gemini-btn-wrapper group"
-                                >
-                                    <span class="gemini-spin-bg"></span>
-                                    <span class="gemini-btn-inner px-8 py-4 sm:px-10 sm:py-5 flex items-center gap-3 text-white font-display font-bold text-lg sm:text-xl tracking-wide">
-                                        <svg class="w-6 h-6 text-brandGreen group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                        </svg>
-                                        <span>Ingresar al Padrón Oficial</span>
-                                        <svg class="w-5 h-5 text-blue-300 group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========================================================
-             3. SECCIÓN: ELEGÍ VERDE Y AZUL, CANDIDATOS Y VIDEOS CON HOOKS
-             ========================================================= -->
-        <section id="candidatos" class="py-10 sm:py-16 px-4 sm:px-8">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-                
-                <!-- Columna Izquierda: Texto Elegí Verde y Azul + Candidatos -->
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left lg:sticky lg:top-24">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brandBrightBlue/30 border border-brandBrightBlue/50 text-blue-100 text-xs sm:text-sm font-semibold">
-                        <span>Instituto de Seguridad Social y Seguros</span>
-                    </div>
-
-                    <h2 class="font-display font-extrabold italic text-4xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
-                        <span class="block text-white drop-shadow-md">Elegí</span>
-                        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-brandGreen via-emerald-300 to-cyan-300 pb-2">
-                            Verde y Azul
-                        </span>
-                    </h2>
-
-                    <p class="text-blue-100 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                        Compromiso, transparencia y defensa real de los derechos de cada afiliado activo y pasivo de nuestra obra social y caja previsional.
-                    </p>
-
-                    <!-- Tarjeta Candidatos con borde dinámico estilo Gemini -->
-                    <div class="gemini-border-box rounded-2xl max-w-xl mx-auto lg:mx-0 text-left">
+                    <div class="w-full gemini-border-box rounded-3xl">
                         <div class="gemini-spin-bg"></div>
-                        <div class="gemini-inner-surface rounded-[13px] p-5 sm:p-6">
-                            <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-3">
-                                <span class="text-xs uppercase tracking-wider text-brandGreen font-bold">Lista Verde y Azul</span>
-                                <span class="text-xs text-blue-300 font-semibold">Boleta Oficial</span>
-                            </div>
-                            <p class="text-xl sm:text-2xl font-display font-extrabold text-white">
-                                Daniel “Gato” TERRAZA
-                            </p>
-                            <p class="text-sm text-brandGreen font-bold mb-4">Candidato Titular</p>
-                            
-                            <div class="pt-3 border-t border-white/10 space-y-1.5 text-sm text-blue-100">
-                                <p><strong class="text-white font-semibold">1° Suplente:</strong> Teresa Del Carmen MORAN</p>
-                                <p><strong class="text-white font-semibold">2° Suplente:</strong> Raúl Antonio MONTENEGRO</p>
-                            </div>
+                        <div class="relative z-10 rounded-[21px] overflow-hidden bg-brandDarkBlue aspect-[9/16] w-full flex flex-col items-center justify-center">
+                            <video 
+                                class="w-full h-full object-cover" 
+                                controls 
+                                playsinline 
+                                preload="metadata"
+                                poster="WhatsApp Image 2026-11-16 at 18.07.58 (1).jpeg"
+                            >
+                                <source src="video-propuesta-1.mp4" type="video/mp4">
+                                Tu navegador no soporta la reproducción de video.
+                            </video>
                         </div>
                     </div>
                 </div>
 
-                <!-- Columna Derecha: Únicamente los 4 Videos Verticales (9:16) con Hooks en Botón Fijo -->
-                <div class="lg:col-span-5 flex flex-col items-center gap-10">
-                    <!-- Video 2 (9:16) -->
-                    <div class="w-full max-w-[300px] sm:max-w-[340px] flex flex-col items-center text-center space-y-4">
-                        <div class="gemini-btn-wrapper">
-                            <span class="gemini-spin-bg"></span>
-                            <div class="gemini-btn-inner px-6 py-2.5 flex items-center gap-2.5 text-white font-display font-extrabold text-base sm:text-lg">
-                                <span class="w-2.5 h-2.5 rounded-full bg-brandGreen animate-pulse shrink-0"></span>
-                                <span>No son palabras...</span>
-                            </div>
-                        </div>
-                        <div class="w-full gemini-border-box rounded-3xl">
-                            <div class="gemini-spin-bg"></div>
-                            <div class="relative z-10 rounded-[21px] overflow-hidden bg-brandDarkBlue aspect-[9/16] w-full flex flex-col items-center justify-center">
-                                <video 
-                                    class="w-full h-full object-cover" 
-                                    controls 
-                                    playsinline 
-                                    preload="metadata"
-                                    poster="WhatsApp Image 2026-11-16 at 18.07.58 (1).jpeg"
-                                >
-                                    <source src="video-propuesta-1.mp4" type="video/mp4">
-                                    Tu navegador no soporta la reproducción de video.
-                                </video>
-                            </div>
+                <!-- Video 3 (9:16) -->
+                <div class="w-full max-w-[300px] sm:max-w-[340px] flex flex-col items-center text-center space-y-4">
+                    <div class="gemini-btn-wrapper">
+                        <span class="gemini-spin-bg"></span>
+                        <div class="gemini-btn-inner px-6 py-2.5 flex items-center gap-2.5 text-white font-display font-extrabold text-base sm:text-lg">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brandGreen animate-pulse shrink-0"></span>
+                            <span>Pagás PLUS?</span>
                         </div>
                     </div>
-
-                    <!-- Video 3 (9:16) -->
-                    <div class="w-full max-w-[300px] sm:max-w-[340px] flex flex-col items-center text-center space-y-4">
-                        <div class="gemini-btn-wrapper">
-                            <span class="gemini-spin-bg"></span>
-                            <div class="gemini-btn-inner px-6 py-2.5 flex items-center gap-2.5 text-white font-display font-extrabold text-base sm:text-lg">
-                                <span class="w-2.5 h-2.5 rounded-full bg-brandGreen animate-pulse shrink-0"></span>
-                                <span>No lo vamos a tratar, lo vamos a imponer...</span>
-                            </div>
-                        </div>
-                        <div class="w-full gemini-border-box rounded-3xl">
-                            <div class="gemini-spin-bg"></div>
-                            <div class="relative z-10 rounded-[21px] overflow-hidden bg-brandDarkBlue aspect-[9/16] w-full flex flex-col items-center justify-center">
-                                <video 
-                                    class="w-full h-full object-cover" 
-                                    controls 
-                                    playsinline 
-                                    preload="metadata"
-                                    poster="WhatsApp Image 2026-11-16 at 18.07.58.jpeg"
-                                >
-                                    <source src="video-propuesta-2.mp4" type="video/mp4">
-                                    Tu navegador no soporta la reproducción de video.
-                                </video>
-                            </div>
+                    <div class="w-full gemini-border-box rounded-3xl">
+                        <div class="gemini-spin-bg"></div>
+                        <div class="relative z-10 rounded-[21px] overflow-hidden bg-brandDarkBlue aspect-[9/16] w-full flex flex-col items-center justify-center">
+                            <video 
+                                class="w-full h-full object-cover" 
+                                controls 
+                                playsinline 
+                                preload="metadata"
+                                poster="WhatsApp Image 2026-11-16 at 18.07.58.jpeg"
+                            >
+                                <source src="video-propuesta-2.mp4" type="video/mp4">
+                                Tu navegador no soporta la reproducción de video.
+                            </video>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Video 4 (9:16) -->
-                    <div class="w-full max-w-[300px] sm:max-w-[340px] flex flex-col items-center text-center space-y-4">
-                        <div class="gemini-btn-wrapper">
-                            <span class="gemini-spin-bg"></span>
-                            <div class="gemini-btn-inner px-6 py-2.5 flex items-center gap-2.5 text-white font-display font-extrabold text-base sm:text-lg">
-                                <span class="w-2.5 h-2.5 rounded-full bg-brandGreen animate-pulse shrink-0"></span>
-                                <span>2 históricos que quedaron afuera...</span>
-                            </div>
-                        </div>
-                        <div class="w-full gemini-border-box rounded-3xl">
-                            <div class="gemini-spin-bg"></div>
-                            <div class="relative z-10 rounded-[21px] overflow-hidden bg-brandDarkBlue aspect-[9/16] w-full flex flex-col items-center justify-center">
-                                <video 
-                                    class="w-full h-full object-cover" 
-                                    controls 
-                                    playsinline 
-                                    preload="metadata"
-                                    poster="WhatsApp Image 2026-11-16 at 18.07.58 (1).jpeg"
-                                >
-                                    <source src="video-propuesta-3.mp4" type="video/mp4">
-                                    Tu navegador no soporta la reproducción de video.
-                                </video>
-                            </div>
+                <!-- Video 4 (9:16) -->
+                <div class="w-full max-w-[300px] sm:max-w-[340px] flex flex-col items-center text-center space-y-4">
+                    <div class="gemini-btn-wrapper">
+                        <span class="gemini-spin-bg"></span>
+                        <div class="gemini-btn-inner px-6 py-2.5 flex items-center gap-2.5 text-white font-display font-extrabold text-base sm:text-lg">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brandGreen animate-pulse shrink-0"></span>
+                            <span>Históricos: Afuera</span>
                         </div>
                     </div>
-
-                    <!-- Video 5 (9:16) -->
-                    <div class="w-full max-w-[300px] sm:max-w-[340px] flex flex-col items-center text-center space-y-4">
-                        <div class="gemini-btn-wrapper">
-                            <span class="gemini-spin-bg"></span>
-                            <div class="gemini-btn-inner px-6 py-2.5 flex items-center gap-2.5 text-white font-display font-extrabold text-base sm:text-lg">
-                                <span class="w-2.5 h-2.5 rounded-full bg-brandGreen animate-pulse shrink-0"></span>
-                                <span>FM Tropical</span>
-                            </div>
+                    <div class="w-full gemini-border-box rounded-3xl">
+                        <div class="gemini-spin-bg"></div>
+                        <div class="relative z-10 rounded-[21px] overflow-hidden bg-brandDarkBlue aspect-[9/16] w-full flex flex-col items-center justify-center">
+                            <video 
+                                class="w-full h-full object-cover" 
+                                controls 
+                                playsinline 
+                                preload="metadata"
+                                poster="WhatsApp Image 2026-11-16 at 18.07.58 (1).jpeg"
+                            >
+                                <source src="video-propuesta-3.mp4" type="video/mp4">
+                                Tu navegador no soporta la reproducción de video.
+                            </video>
                         </div>
-                        <div class="w-full gemini-border-box rounded-3xl">
-                            <div class="gemini-spin-bg"></div>
-                            <div class="relative z-10 rounded-[21px] overflow-hidden bg-brandDarkBlue aspect-[9/16] w-full flex flex-col items-center justify-center">
-                                <video 
-                                    class="w-full h-full object-cover" 
-                                    controls 
-                                    playsinline 
-                                    preload="metadata"
-                                    poster="WhatsApp Image 2026-11-16 at 18.07.58.jpeg"
-                                >
-                                    <source src="video-propuesta-4.mp4" type="video/mp4">
-                                    Tu navegador no soporta la reproducción de video.
-                                </video>
-                            </div>
+                    </div>
+                </div>
+
+                <!-- Video 5 (9:16) -->
+                <div class="w-full max-w-[300px] sm:max-w-[340px] flex flex-col items-center text-center space-y-4">
+                    <div class="gemini-btn-wrapper">
+                        <span class="gemini-spin-bg"></span>
+                        <div class="gemini-btn-inner px-6 py-2.5 flex items-center gap-2.5 text-white font-display font-extrabold text-base sm:text-lg">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brandGreen animate-pulse shrink-0"></span>
+                            <span>FM Tropical</span>
+                        </div>
+                    </div>
+                    <div class="w-full gemini-border-box rounded-3xl">
+                        <div class="gemini-spin-bg"></div>
+                        <div class="relative z-10 rounded-[21px] overflow-hidden bg-brandDarkBlue aspect-[9/16] w-full flex flex-col items-center justify-center">
+                            <video 
+                                class="w-full h-full object-cover" 
+                                controls 
+                                playsinline 
+                                preload="metadata"
+                                poster="WhatsApp Image 2026-11-16 at 18.07.58.jpeg"
+                            >
+                                <source src="video-propuesta-4.mp4" type="video/mp4">
+                                Tu navegador no soporta la reproducción de video.
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -536,7 +430,7 @@
         </section>
 
         <!-- =========================================================
-             5. SECCIÓN: FORMULARIO CAMPANITA DE NOTIFICACIONES WHATSAPP
+             4. SECCIÓN: FORMULARIO CAMPANITA DE NOTIFICACIONES WHATSAPP
              ========================================================= -->
         <section id="notificaciones-whatsapp" class="py-10 sm:py-16 px-4 sm:px-8">
             <div class="max-w-xl mx-auto">
@@ -618,6 +512,135 @@
                 </div>
             </div>
         </section>
+
+        <!-- =========================================================
+             5. SECCIÓN: CONSULTA DE MESAS (MOVIDA DEBAJO DEL FORMULARIO)
+             ========================================================= -->
+        <section id="consulta-mesas" class="py-8 sm:py-12 px-4 sm:px-8">
+            <div class="max-w-md mx-auto flex flex-col items-center text-center space-y-5">
+                <!-- Botón "Mesas" con Borde Dinámico Estilo Gemini -->
+                <div>
+                    <a 
+                        href="https://issys.chubut.gov.ar/wp-content/uploads/2026/11/Resolucion-49_26-JE-ISSyS.pdf" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="gemini-btn-wrapper group"
+                    >
+                        <span class="gemini-spin-bg"></span>
+                        <span class="gemini-btn-inner px-9 py-4 flex items-center gap-3 text-white font-display font-bold text-lg sm:text-xl tracking-wide">
+                            <svg class="w-6 h-6 text-brandGreen group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <span>Mesas</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Texto descriptivo debajo del botón -->
+                <p class="text-blue-100 text-base sm:text-lg font-medium max-w-sm leading-relaxed">
+                    Conoce las mesas donde podrás votar este <strong class="text-brandGreen">30 de Noviembre</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             6. SECCIÓN: CONOCE EL PADRÓN CON IMAGEN (MOVIDA DEBAJO DE MESAS)
+             ========================================================= -->
+        <section id="padron" class="py-8 sm:py-14 px-4 sm:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="gemini-border-box rounded-3xl">
+                    <div class="gemini-spin-bg"></div>
+                    <div class="gemini-inner-surface rounded-[21px] p-6 sm:p-10 md:p-12 text-center space-y-8">
+                        
+                        <!-- Imagen 2 con borde dinámico estilo Gemini -->
+                        <div class="relative max-w-xl mx-auto gemini-border-box rounded-3xl">
+                            <div class="gemini-spin-bg"></div>
+                            <div class="relative z-10 rounded-[21px] overflow-hidden bg-brandBlue">
+                                <img 
+                                    src="WhatsApp Image 2026-11-16 at 18.07.58.jpeg" 
+                                    alt="Equipo Lista Verde y Azul - ISSyS" 
+                                    class="w-full h-auto object-cover block"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/800x900/003893/39FF14?text=Elegi+Verde+y+Azul+-+ISSyS';"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Título "Conoce el padrón" y Botón Estilo Gemini -->
+                        <div class="space-y-4 max-w-xl mx-auto">
+                            <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
+                                Conoce el padrón
+                            </h2>
+                            <p class="text-blue-200 text-base sm:text-lg">
+                                Verificá tus datos y lugar de votación de manera rápida y segura en el sitio oficial de la Provincia del Chubut.
+                            </p>
+
+                            <div class="pt-3 flex justify-center">
+                                <a 
+                                    href="https://gb.chubut.gov.ar/votos/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    class="gemini-btn-wrapper group"
+                                >
+                                    <span class="gemini-spin-bg"></span>
+                                    <span class="gemini-btn-inner px-8 py-4 sm:px-10 sm:py-5 flex items-center gap-3 text-white font-display font-bold text-lg sm:text-xl tracking-wide">
+                                        <svg class="w-6 h-6 text-brandGreen group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <span>Ingresar al Padrón Oficial</span>
+                                        <svg class="w-5 h-5 text-blue-300 group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             7. SECCIÓN: INSTITUTO DE SEGURIDAD SOCIAL Y SEGUROS + CANDIDATOS
+             ========================================================= -->
+        <section id="candidatos" class="py-10 sm:py-16 px-4 sm:px-8">
+            <div class="max-w-3xl mx-auto space-y-6 text-center">
+                <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-brandBrightBlue/30 border border-brandBrightBlue/50 text-blue-100 text-xs sm:text-sm font-semibold">
+                    <span>Instituto de Seguridad Social y Seguros</span>
+                </div>
+
+                <h2 class="font-display font-extrabold italic text-4xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
+                    <span class="block text-white drop-shadow-md">Elegí</span>
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-brandGreen via-emerald-300 to-cyan-300 pb-2">
+                        Verde y Azul
+                    </span>
+                </h2>
+
+                <p class="text-blue-100 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
+                    Compromiso, transparencia y defensa real de los derechos de cada afiliado activo y pasivo de nuestra obra social y caja previsional.
+                </p>
+
+                <!-- Tarjeta Candidatos con borde dinámico estilo Gemini -->
+                <div class="gemini-border-box rounded-2xl max-w-xl mx-auto text-left">
+                    <div class="gemini-spin-bg"></div>
+                    <div class="gemini-inner-surface rounded-[13px] p-5 sm:p-6">
+                        <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-3">
+                            <span class="text-xs uppercase tracking-wider text-brandGreen font-bold">Lista Verde y Azul</span>
+                            <span class="text-xs text-blue-300 font-semibold">Boleta Oficial</span>
+                        </div>
+                        <p class="text-xl sm:text-2xl font-display font-extrabold text-white">
+                            Daniel “Gato” TERRAZA
+                        </p>
+                        <p class="text-sm text-brandGreen font-bold mb-4">Candidato Titular</p>
+                        
+                        <div class="pt-3 border-t border-white/10 space-y-1.5 text-sm text-blue-100">
+                            <p><strong class="text-white font-semibold">1° Suplente:</strong> Teresa Del Carmen MORAN</p>
+                            <p><strong class="text-white font-semibold">2° Suplente:</strong> Raúl Antonio MONTENEGRO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- =========================================================
@@ -671,7 +694,7 @@
         </div>
     </footer>
 
-    <!-- Script del Contador Dinámico Exacto -->
+    <!-- Script del Contador Dinámico Exacto y Google Sheets -->
     <script>
         (function() {
             // Fecha objetivo exacta: 30 de noviembre de 2026 a las 09:00:00 hrs (UTC-3 Argentina)
@@ -721,11 +744,13 @@
         })();
 
         // =========================================================================
-        // CONEXIÓN DEL FORMULARIO CON GOOGLE SHEETS (2 COLUMNAS: NOMBRE Y CELULAR)
+        // CONEXIÓN CON GOOGLE SHEET: 1O6KrEkxpgusWweuzn0YRZSyCFKMFY6Gs20cwJdnm3XU
+        // Columna A: Nombres | Columna B: Celulares
         // =========================================================================
         (function() {
-            // PEGA AQUÍ LA URL DE TU APLICACIÓN WEB DE GOOGLE APPS SCRIPT:
-            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/TU_ID_DE_IMPLEMENTACION_AQUI/exec';
+            const SPREADSHEET_ID = '1O6KrEkxpgusWweuzn0YRZSyCFKMFY6Gs20cwJdnm3XU';
+            // Pega aquí la URL /exec que te da Google Apps Script al publicar tu Sheet:
+            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/REEMPLAZAR_CON_TU_URL_EXEC/exec';
 
             const form = document.getElementById('whatsapp-bell-form');
             const submitBtn = document.getElementById('submit-bell-btn');
@@ -745,17 +770,18 @@
 
                 // Estado de carga
                 submitBtn.disabled = true;
-                submitText.textContent = 'Activando notificaciones...';
+                submitText.textContent = 'Guardando contacto...';
                 feedbackEl.classList.add('hidden');
 
                 try {
                     const formData = new URLSearchParams();
-                    formData.append('nombre', nombre);
-                    formData.append('telefono', telefono);
+                    formData.append('spreadsheetId', SPREADSHEET_ID);
+                    formData.append('nombre', nombre);     // Columna A
+                    formData.append('telefono', telefono); // Columna B
 
-                    // Si aún no se configuró la URL real, simulamos éxito local para vista previa
-                    if (GOOGLE_SCRIPT_URL.includes('TU_ID_DE_IMPLEMENTACION_AQUI')) {
-                        await new Promise(resolve => setTimeout(resolve, 700));
+                    if (GOOGLE_SCRIPT_URL.includes('REEMPLAZAR_CON_TU_URL_EXEC')) {
+                        // Modo vista previa mientras pegas la URL /exec de Apps Script
+                        await new Promise(resolve => setTimeout(resolve, 600));
                     } else {
                         await fetch(GOOGLE_SCRIPT_URL, {
                             method: 'POST',
